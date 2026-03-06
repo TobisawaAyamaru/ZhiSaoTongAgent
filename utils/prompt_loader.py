@@ -1,6 +1,6 @@
-from config_handler import prompts_conf
-from path_tool import get_abs_path
-from logger_handle import logger
+from utils.config_handler import prompts_conf
+from utils.path_tool import get_abs_path
+from utils.logger_handle import logger
 
 
 def load_system_prompts():
@@ -46,7 +46,3 @@ def load_report_prompts():
     except Exception as e:
         logger.error(f"[oad_report_prompts]解析报告生成出错,{str(e)}")
         raise e
-
-
-if __name__ == "__main__":
-    print(load_report_prompts())
